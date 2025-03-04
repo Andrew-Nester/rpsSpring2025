@@ -88,8 +88,8 @@ while(playerWins < 5 && computerWins < 5){
                 console.log("you tied scissors are neutral to scissors")
             }
         }
-    console.log (`player wins ${playerWins}`)
-    console.log (`computer wins ${computerWins}`)
+    console.log (`player wins: ${playerWins}`)
+    console.log (`computer wins: ${computerWins}`)
     } else {
         console.log("You MUST choose rock, paper or scissors")
     }
