@@ -27,6 +27,7 @@ let playerWins = 0
 let computerWins = 0
 let playerPlay = 0
 let computerPlay = 0
+let playAgain = "yes"
 function computerSelect(){
     let a = Math.random()
     a = a * 3
@@ -44,9 +45,13 @@ function playerSelect(){
         let b = prompt("Rock Paper or Scissors")
         playerPlay = b.toLowerCase()
 }
+while (playAgain == "yes"){
+    computerWins = 0
+    playerWins = 0
 while(playerWins < 5 && computerWins < 5){
     playerSelect()
     computerSelect()
+    console.clear()
         if (playerPlay == "rock" || playerPlay == "paper" || playerPlay == "scissors"){
         console.log(`You played: ${playerPlay}`)
         console.log(`Computer played: ${computerPlay}`)
@@ -88,4 +93,7 @@ while(playerWins < 5 && computerWins < 5){
     } else {
         console.log("You MUST choose rock, paper or scissors")
     }
+}
+playAgain = prompt("Would you like to play again?")
+playAgain = playAgain.toLowerCase()
 }
